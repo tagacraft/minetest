@@ -1,0 +1,97 @@
+MyCustom
+a mod by gudule written firstly for the server 'Baobab Nation' to add some usefull recipes
+
+Release 1: around 2021-05-25
+
+	add cooking recipe for compressed cobble to give 9 stones (mod moreblocks);
+
+Release 2: around 2021-05-28
+
+	add optional_depends = darkage to the file mod.conf
+	add crafting recipe to craft back darkage:chalk from 2 darkage:chalk_powder if the mod is installed
+
+Release 3: 2021-06-01
+
+	add this releases.txt file;
+	in the file mod.conf, move "moreblocks" from 'depends' to 'optional_depends'
+	add settings into init.lua to easily (de)activate recipes. BE AWARE de-activate a recipe will result in 'unknown' nodes and items ingame ! 
+	add recipe for darkage:old_tuff_bricks;
+	New functions :
+	 can call pkarcs.register_node() with any node of any mod to make arcs from them :)
+	 
+Release 3.1 : 2021-06-05
+
+	can call technic_cnc.register_all() for some nodes to be shaped by the cnc machine (mod technic_cnc)
+
+Release 3.2 : 2021-06-07
+
+	add cooking recipe for 1 extra:cobble_condensed to 81 default:stone;
+	settings.Technic_cnc_must_register.main_switch set to false by default to avoid exceed limit of nodes in registered_nodes;
+
+Release 3.3 : 2021-09-02
+
+	add cooking recipe for compressed desert_cobble to give 9 desert_stones (mod moreblocks);
+
+Release 3.4 : 2021-09-11
+
+    add cooking recipes for some dirts that have no recipe yet, with default:<some ingredients> and optionally with <some_mod>:<some ingredients>
+
+Release 4.0 : 2021-09-14
+========================
+
+    modify the structure of the mod :
+    Now a release will not overwrite previous customs settings made localy by an admin of a server :
+    local settings are saved in a file at
+    <worldpath>/mycustom_local_settings.dat
+
+release 4.0.1 : 2021-09-15
+
+   bugfix and separate also recipes definitions from code to factory_recipes.lua file;
+   copy (if not exist) mycustom_local_settings.lua and mycustom_local_recipes.lua from 
+   mod path to world path to prevent release update to overwrite local settings made by the server's admin
+
+release 4.0.2 : 2021-10-05
+
+   modify the data structure in mycustom_local_settings.lua : tables of switches Pkarcs_must_register = {...} and
+   Technic_cnc_must_register = {...} are both integrated in the structure 
+   shapers = {
+      pkarcs = {...},
+      technic_cnc = {...},
+   }
+   a routine make the upgrade if needed;
+   a routine checks the presence of mycustom_new_settings.lua to integrate new switches directly 
+	in mycustom_local_settings.lua;
+   added switches :
+   in mycustom_default_settings.lua :
+   -  max_nodes_allowed_by_minetest = 32767     -- the max number of nodes in minetest.registered_nodes;
+	As this value would not change out of a change of the minetest's core engine, there is no raison to include
+	this switch in "local_settings.lua" 
+   in mycustom_local_settings.lua :
+   -  node_places_to_left_free = (customizable) -- the min number of places we want mycustom to left free :
+		after "mycustom" finish it work, be sure at least this amount of places will remain free for
+ 		a call to minetest.register_node().
+   -  shapers[some_mod_name].subnodes_made = (adjustable) -- the number of nodes that will be created by this 
+	particular mod when called for registering a node : for example, calling pkarcs to register a_node will 
+	create 3 new nodes as <a_node_arc>, <a_node>_inner_arc and <a_node>_outer_arc.
+	This number is adjustable because some servers has customized the amount of shapes enabled for some mods.
+	This number is automatically adjusted after the first call of such a procedure to stay closest to the true;
+	The call is done only if the precalculated number of new nodes is compatible with the free available places;
+	
+	To know those 3 numeric switches allow to avoid a server crash by precalculating the necessary amount of 
+	free space in minetest.registered_nodes before calling a_mod.register(a_node).
+
+Release 4.0.3 : 2021-10-12
+	
+	new shaper integrated in settings : circular_saw from mod moreblocks;
+
+	when new settings are brought by a release (file <modpath>/mycustom_new_settings.lua exist), the player with 
+	privs["server"]==true (the admin) receive a chat message 5sec after login; rename or remove the file will discard this message.
+	why this message ? the new settings are integrated in <modpath> both in files .._default_settings.lua and .._local_settings.lua;
+	that way, new settings (normaly unactivated) must be manually integrated in the <worldpath> local_settings.lua if customization
+	is desired by the admin. the content of mycustom_new_settings.lua have explanations in comments and the right part of settings
+	ready to copy-paste at the right place inside the file <worldpath>/mycustom_local_settings.lua.
+	the file <modpath>/mycustom_local_settings.lua already integrate those new settings, so they will be ready to customize in case
+	of missing file in <worldpath>.
+	Why haven't i automatically integrated new settings in <worldpath>/mycustom_local_settings.lua ?
+	- I no longer have any hair to pull out...
+	So let the admin decide if he want to customize that new settings, at the price of a copy-paste :)
