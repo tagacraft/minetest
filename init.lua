@@ -2,8 +2,7 @@
 Current release : 4.0.3
 
 This mod was written by Gudule initialy for the use of the webserver 'baobab nation';
-there is no licence attached except of course for all the mods reffered to ;
-So feel free to use-modify-redistribute this mod as you want.
+This mod is under MIT license as said in file license.txt .
 
 the main aim is to add some functionalities like 
 	- usefull recipes forgotten by some installed mods;

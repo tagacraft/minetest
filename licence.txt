@@ -1,5 +1,20 @@
 This mod "Mycustom" was released first to add some patches and minor modifications to some mod without need to modify those mod's files themselves.
-so there is no licence at all to do what you want with it.
-Use it at your own risks, have fun and enjoy :)
-Author of this mod may be joined at :
+This mod is placed under the MIT license as follow :
+
+« Copyright © <tagacraft@free.fr>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+The Software is provided “as is”, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the Software. »
+
+french translated as :
+« Copyright © <tagacraft@free.fr>
+La présente autorise, de façon libre et gratuite, à toute personne obtenant une copie de ce programme et des fichiers de documentation associés (le Programme), de distribuer le Programme sans restriction, y compris sans limitation des droits d'utiliser, copier, modifier, fusionner, publier, distribuer, sous-autoriser ou vendre des copies du Programme, et de permettre aux personnes à qui le Programme est fourni d'en faire autant, aux conditions suivantes.
+
+Le copyright précédent et cette autorisation doivent être distribués dans toute copie entière ou substantielle de ce Programme.
+
+Le Programme est fourni en l'état, sans garantie d'aucune sorte, explicite ou implicite, y compris les garanties de commercialisation ou d'adaptation dans un but particulier et l'absence de contrefaçon. En aucun cas les auteurs ou ayants droit ne seront tenus responsables de réclamations, dommages ou autres, que ce soit dans une action de nature contractuelle, préjudiciable ou autres façons, découlant de, hors ou en connexion avec le Programme ou l'utilisation ou autres modifications du Programme. »
+
+Primary author of this mod may be joined at :
 tagacraft (at) free.fr

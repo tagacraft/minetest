@@ -16,8 +16,8 @@ local_settings = {
 			main_switch = false,	-- if =false, no work at all will be done for this shaper, whatever the switches below.
 			subnodes_made = 49,  	--[[ how many subnodes are made by this mod while registering a node. this value is used to test that actual
 										registered nodes more that value will not exceed the limit of minetest.registered_nodes which is currently 32767;
-										the shaper will be call for the 1st node with switch set to true, then the real amount of shaped mod will 
-										be calculated and this value updated if needed.
+										the shaper will be call for the 1st node with switch set to true, then the real amount of shaped nodes 
+										("subnodes_mades") will be calculated and this value updated if needed.
 										After that, if limit would be exceeded, the call will not be done to avoid server crash at load time. 
 									 ]]
 			mods = { 				-- Only if 'main_switch'==true, Check out the following mods to (not) link their nodes to the shaper: 
